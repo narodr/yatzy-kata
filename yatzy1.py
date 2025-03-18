@@ -1,6 +1,6 @@
 class YatzyConfig:
-    def __init__(self, number_of_dices: int = 5, number_of_faces: int = 6):
-        self.number_of_dices = number_of_dices
+    def __init__(self, number_of_dice: int = 5, number_of_faces: int = 6):
+        self.number_of_dice = number_of_dice
         self.number_of_faces = number_of_faces
 
 
@@ -29,8 +29,8 @@ class Yatzy(YatzyConfig):
     def dice(self, dice):
         if not isinstance(dice, list):
             raise TypeError("dice must be a list")
-        if len(dice) != self.number_of_dices:
-            raise ValueError("dice must be a list of length equal to {self.number_of_dices}")
+        if len(dice) != self.number_of_dice:
+            raise ValueError("dice must be a list of length equal to {self.number_of_dice}")
         for die in dice:
             if not isinstance(die, int):
                 raise TypeError("dice must be a list of integers")
