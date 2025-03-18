@@ -8,15 +8,6 @@ class Yatzy(YatzyConfig):
     def __init__(self, dice: list):
         super().__init__()
         self.dice = dice
-        self.chance = self.chance()
-        self.yazty = self.yazty()
-        self.one_pair = self.one_pair()
-        self.two_pair = self.two_pair()
-        self.four_of_a_kind = self.four_of_a_kind()
-        self.three_of_a_kind = self.three_of_a_kind()
-        self.small_straight = self.small_straight()
-        self.large_straight = self.large_straight()
-        self.full_house = self.full_house()
 
     def __len__(self):
         return len(self.dice)
@@ -51,7 +42,7 @@ class Yatzy(YatzyConfig):
             total += die
         return total
 
-    def yazty(self):
+    def yatzy(self):
         for face in range(self.number_of_faces, 0, -1):
             if (self._frequency_of_number(face) == len(self)):
                 return 50
@@ -117,6 +108,6 @@ class Yatzy(YatzyConfig):
             if (self._frequency_of_number(face) == 2):
                 exists_pair = True
         if (exists_pair and exists_three):
-            return self.chance
+            return self.chance()
         else:
             return 0
