@@ -1,5 +1,4 @@
 # yatzy-kata
 
-My personal Refactoring Code Kata on the Yatzy rules.
+My personal refactorings of the [Yatzy Kata](https://github.com/emilybache/Yatzy-Refactoring-Kata).
 
-The original template can be found [here](https://github.com/emilybache/Yatzy-Refactoring-Kata).
