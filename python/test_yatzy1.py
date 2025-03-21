@@ -1,4 +1,4 @@
-from yatzy1 import Yatzy
+from python.yatzy1 import Yatzy
 
 
 # These unit tests can be run using the py.test framework
